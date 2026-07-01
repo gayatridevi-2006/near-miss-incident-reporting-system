@@ -1,0 +1,636 @@
+/* Login.module.css - Government ERP theme matching Reference Design */
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #FFFFFF;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333;
+}
+
+/* HEADER SECTION */
+.header {
+  background-color: #FFFFFF;
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid #1565C0;
+  box-sizing: border-box;
+}
+
+.headerLogoLeft, .headerLogoRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px; /* Increased height to 75px for larger logos */
+  width: 140px; /* Increased width to 140px for larger logos */
+}
+
+.headerTextCenter {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.headerTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1565C0;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.headerSubtitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2E7D32;
+  margin: 0.15rem 0 0 0;
+  letter-spacing: 0.02em;
+}
+
+.headerTagline {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333333;
+  margin: 0.15rem 0 0 0;
+  font-style: italic;
+}
+
+/* MAIN CONTENT SECTION */
+.mainContent {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Left Section (55%) */
+.leftPanel {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-right: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  background-color: #F9F9F9;
+}
+
+.bgImageContainer {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem 2rem 1.5rem 2rem;
+  box-sizing: border-box;
+  background-image: url('./vizag_steel_bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.bgImageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.18); /* 18% white overlay for high readability */
+  z-index: 1;
+}
+
+.leftPanelContent {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sloganBlock {
+  margin-top: 0.25rem;
+}
+
+.sloganLine1 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #1565C0;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.sloganLine2 {
+  font-size: 3.2rem;
+  font-weight: 950;
+  color: #2E7D32; /* STOP IT. is green */
+  margin: 0.15rem 0 0 0;
+  letter-spacing: 0.01em;
+}
+
+/* Slogan green underline bar */
+.sloganLine {
+  width: 220px;
+  height: 4px;
+  background-color: #2E7D32;
+  margin: 0.5rem 0 0.85rem 0;
+}
+
+.sloganSub {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+}
+
+/* Bottom Safety Cards (4 White cards with shadow) */
+.safetyCircleRow {
+  display: flex;
+  gap: 1rem;
+  margin: 2.5rem 0 0.5rem 0; /* Spacing adjusted since center helmet illustration is removed */
+  justify-content: space-between;
+}
+
+.safetyCard {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 0.5rem; /* Increased vertical padding to make them larger */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 0; /* allows shrinking in flexbox */
+  border: 1px solid #EAEAEA;
+}
+
+.cardIconWrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.iconSee {
+  background-color: #E3F2FD;
+  color: #1565C0;
+  border: 1px solid #BBDEFB;
+}
+
+.iconReport {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  border: 1px solid #C8E6C9;
+}
+
+.iconStop {
+  background-color: #FDF2E9;
+  color: #F57C00;
+  border: 1px solid #FFE0B2;
+}
+
+.iconSafe {
+  background-color: #E8EAF6;
+  color: #3F51B5;
+  border: 1px solid #C5CAE9;
+}
+
+.cardTitle {
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.cardTitleSee { color: #1565C0; }
+.cardTitleReport { color: #2E7D32; }
+.cardTitleStop { color: #F57C00; }
+.cardTitleSafe { color: #3F51B5; }
+
+.cardDesc {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #555555;
+  line-height: 1.2;
+}
+
+.bottomStrip {
+  background-color: #2E7D32;
+  color: #FFFFFF;
+  padding: 0.85rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Right Section (45%) */
+.rightPanel {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5F5F5; /* Matches reference light grey backing */
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.loginCard {
+  width: 100%;
+  max-width: 480px;
+  background-color: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem 2.25rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginCardTitle {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1565C0;
+  margin: 0 auto;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.titleUnderline {
+  width: 60px;
+  height: 3px;
+  background-color: #1565C0;
+  margin: 0 auto 1.5rem auto;
+}
+
+.errorBanner {
+  background-color: #FFEBEE;
+  border: 1px solid #FFCDD2;
+  color: #C62828;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.formGroup {
+  margin-bottom: 1.25rem;
+}
+
+.fieldLabel {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 0.4rem;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777777;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777777;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  font-size: 0.9rem;
+  color: #333333;
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: #1565C0;
+  box-shadow: 0 0 0 2px rgba(21, 101, 192, 0.1);
+}
+
+/* Captcha styling */
+.captchaContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.captchaImage {
+  background-color: #F8F9FA;
+  border: 1px solid #CCCCCC;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  padding: 0.5rem;
+  color: #222222;
+  text-decoration: line-through;
+  user-select: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  min-width: 110px;
+  height: 42px;
+  box-sizing: border-box;
+  background-image: radial-gradient(circle, #EAEAEA 10%, transparent 11%), radial-gradient(circle, #EAEAEA 10%, transparent 11%);
+  background-size: 6px 6px;
+  background-position: 0 0, 3px 3px;
+}
+
+.refreshButton {
+  background: none;
+  border: 1px solid #CCCCCC;
+  background-color: #FFFFFF;
+  color: #1565C0;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  height: 42px;
+  width: 42px;
+  box-sizing: border-box;
+}
+
+.refreshButton:hover {
+  background-color: #F5F5F5;
+  border-color: #1565C0;
+}
+
+.captchaInput {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  color: #333333;
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 6px;
+  box-sizing: border-box;
+  height: 42px;
+}
+
+.captchaInput:focus {
+  outline: none;
+  border-color: #1565C0;
+}
+
+/* Button layout */
+.buttonGroup {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.loginBtn {
+  flex: 2;
+  background-color: #2E7D32;
+  color: #FFFFFF;
+  border: 1px solid #1B5E20;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.loginBtn:hover:not(:disabled) {
+  background-color: #1B5E20;
+}
+
+.loginBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.resetBtn {
+  flex: 1.2;
+  background-color: #EAEAEA;
+  color: #333333;
+  border: 1px solid #CCCCCC;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.resetBtn:hover:not(:disabled) {
+  background-color: #DCDCDC;
+}
+
+.forgotPasswordLink {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #1565C0;
+  text-decoration: none;
+  margin-top: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.forgotPasswordLink:hover {
+  text-decoration: underline;
+}
+
+.registerLink {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #1565C0;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+}
+
+.registerLink:hover {
+  text-decoration: underline;
+}
+
+/* Demo autofill section styling */
+.demoContainer {
+  margin-top: 1.25rem;
+  background-color: #F0F5FF;
+  border: 1px solid #B3D7FF;
+  border-radius: 8px;
+  padding: 0.85rem;
+  box-sizing: border-box;
+}
+
+.demoHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1565C0;
+  margin-bottom: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.demoButtonsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.demoBtn {
+  background-color: #FFFFFF;
+  border: 1px solid #D5D5D5;
+  border-radius: 6px;
+  padding: 0.45rem 0.25rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease;
+}
+
+.demoBtn:hover {
+  background-color: #F5F5F5;
+  border-color: #1565C0;
+  box-shadow: 0 2px 5px rgba(21, 101, 192, 0.15);
+}
+
+.demoBtnEmployee { color: #1565C0; }
+.demoBtnSafety { color: #2E7D32; }
+.demoBtnHOD { color: #F57C00; }
+.demoBtnAdmin { color: #7B1FA2; }
+
+/* FOOTER SECTION */
+.footer {
+  background-color: #1565C0;
+  color: #FFFFFF;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-top: 3px solid #0D47A1;
+  box-sizing: border-box;
+}
+
+.footerLeft, .footerRight {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.footerCenter {
+  text-align: center;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+.footerCenterTitle {
+  font-weight: 700;
+}
+
+.footerCenterSub {
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.footerRight {
+  text-transform: uppercase;
+}
+
+/* RESPONSIVE LAYOUT adjustments */
+@media (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+  .headerLogoLeft, .headerLogoRight {
+    height: 45px;
+  }
+  .mainContent {
+    flex-direction: column;
+  }
+  .leftPanel {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #E0E0E0;
+  }
+  .rightPanel {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+  .safetyCircleRow {
+    gap: 0.5rem;
+    margin: 2rem 0;
+  }
+  .safetyCard {
+    padding: 1.25rem 0.25rem;
+  }
+  .sloganLine1 {
+    font-size: 2rem;
+  }
+  .sloganLine2 {
+    font-size: 2.6rem;
+  }
+  .demoButtonsRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+}

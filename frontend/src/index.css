@@ -1,0 +1,376 @@
+/* Near Miss Incident Management System - Government ERP Design System */
+
+:root {
+  /* Colors */
+  --primary-blue: #1976D2;
+  --light-blue: #E3F2FD;
+  --success-green: #2E7D32;
+  --bg-white: #FFFFFF;
+  --bg-light-gray: #F5F7FA;
+  --border-color: #D3D3D3;
+  --border-hover: #B0C4DE;
+  
+  --text-primary: #333333;
+  --text-secondary: #555555;
+  --text-muted: #777777;
+  
+  --primary: #1976D2;          /* Primary Blue */
+  --primary-hover: #115293;
+  
+  --safety-orange: #F57C00;     /* Warning/CAPA */
+  
+  /* Status Colors */
+  --status-pending: #E65100;
+  --status-investigating: #0D47A1;
+  --status-action: #4A148C;
+  --status-resolved: #1B5E20;
+  --status-closed: #37474F;
+  
+  /* Severity Colors */
+  --severity-low: #1B5E20;
+  --severity-medium: #E65100;
+  --severity-high: #C62828;
+  --severity-critical: #B71C1C;
+  
+  /* Transitions */
+  --transition-smooth: all 0.2s ease-in-out;
+  --transition-fast: all 0.1s ease;
+  
+  /* Layout sizes */
+  --sidebar-width: 260px;
+  --navbar-height: 70px;
+}
+
+/* Reset & Base styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-white);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--primary-blue);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-light-gray);
+}
+::-webkit-scrollbar-thumb {
+  background: #C1C1C1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A8A8A8;
+}
+
+/* Utility Layouts */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-white);
+}
+
+.main-content {
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-white);
+  transition: var(--transition-smooth);
+}
+
+.content-wrapper {
+  flex: 1;
+  padding-left: var(--sidebar-width);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-white);
+  transition: var(--transition-smooth);
+}
+
+@media (max-width: 1024px) {
+  .content-wrapper {
+    padding-left: 0;
+  }
+}
+
+.page-body {
+  flex: 1;
+  padding: 1.5rem;
+  width: 100%;
+  background-color: var(--bg-white);
+}
+
+/* Solid ERP-style Cards */
+.glass-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1.5rem;
+  transition: var(--transition-smooth);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.glass-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+
+/* Green Action Button */
+.btn-primary {
+  background: var(--success-green);
+  color: #FFFFFF;
+  border: 1px solid #1E5222;
+}
+
+.btn-primary:hover {
+  background: #1E5222;
+}
+
+/* Light Grey / White Button */
+.btn-secondary {
+  background: #FFFFFF;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-light-gray);
+  border-color: var(--border-hover);
+}
+
+.btn-danger {
+  background: #D32F2F;
+  color: #FFFFFF;
+  border: 1px solid #B71C1C;
+}
+
+.btn-danger:hover {
+  background: #B71C1C;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.875rem;
+  transition: var(--transition-smooth);
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.15);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Tables */
+.table-container {
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.custom-table th {
+  padding: 0.75rem 1rem;
+  background: var(--light-blue);
+  border-bottom: 2px solid var(--primary-blue);
+  color: var(--primary-blue);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.custom-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  background: #FFFFFF;
+}
+
+.custom-table tr {
+  transition: var(--transition-fast);
+}
+
+.custom-table tr:hover td {
+  background: var(--bg-light-gray);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+/* Status badging */
+.badge-pending {
+  background: #FFF3E0;
+  color: var(--status-pending);
+  border: 1px solid #FFE0B2;
+}
+
+.badge-under_investigation {
+  background: #E3F2FD;
+  color: var(--status-investigating);
+  border: 1px solid #BBDEFB;
+}
+
+.badge-action_proposed {
+  background: #F3E5F5;
+  color: var(--status-action);
+  border: 1px solid #E1BEE7;
+}
+
+.badge-resolved {
+  background: #E8F5E9;
+  color: var(--status-resolved);
+  border: 1px solid #C8E6C9;
+}
+
+.badge-closed {
+  background: #ECEFF1;
+  color: var(--status-closed);
+  border: 1px solid #CFD8DC;
+}
+
+/* Severity badging */
+.badge-low {
+  background: #E8F5E9;
+  color: var(--severity-low);
+  border: 1px solid #C8E6C9;
+}
+
+.badge-medium {
+  background: #FFF3E0;
+  color: var(--severity-medium);
+  border: 1px solid #FFE0B2;
+}
+
+.badge-high {
+  background: #FFEBEE;
+  color: var(--severity-high);
+  border: 1px solid #FFCDD2;
+}
+
+.badge-critical {
+  background: #FFEBEE;
+  color: var(--severity-critical);
+  border: 2px solid var(--severity-critical);
+}
+
+/* Dashboard KPIs Grid */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.kpi-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.kpi-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  background: var(--light-blue);
+  border: 1px solid var(--border-hover);
+  color: var(--primary-blue);
+}
+
+.kpi-details h3 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.kpi-details .value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  line-height: 1.1;
+}
+
+/* Animations */
+.fade-in {
+  /* Simple instant opacity change to keep it fast and traditional ERP style */
+  opacity: 1;
+}
+
+
