@@ -21,12 +21,20 @@
   box-sizing: border-box;
 }
 
-.headerLogoLeft, .headerLogoRight {
+.headerLogoLeft {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 75px; /* Increased height to 75px for larger logos */
-  width: 140px; /* Increased width to 140px for larger logos */
+  height: 90px;
+  width: 165px;
+}
+
+.headerLogoRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px; /* Keep safety first logo at original size */
+  width: 140px;
 }
 
 .headerTextCenter {
@@ -85,7 +93,7 @@
   justify-content: space-between;
   padding: 2.5rem 2rem 1.5rem 2rem;
   box-sizing: border-box;
-  background-image: url('./vizag_steel_bg.png');
+  background-image: url('https://res.cloudinary.com/q1i4rona/image/upload/f_auto,q_auto/vizag_steel_bg_1782353974569_tlp6mu');
   background-size: cover;
   background-position: center;
 }

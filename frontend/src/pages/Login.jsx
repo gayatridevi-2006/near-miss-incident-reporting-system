@@ -91,24 +91,11 @@ const Login = () => {
       <header className={styles.header}>
         {/* Vizag Steel Plant Logo (Sharp high-quality Vector) */}
         <div className={styles.headerLogoLeft} title="VIZAG STEEL Logo">
-          <svg viewBox="0 0 100 100" width="100%" height="100%">
-            {/* Outer circles */}
-            <circle cx="50" cy="50" r="44" fill="none" stroke="#2E7D32" strokeWidth="3.5" />
-            <circle cx="50" cy="50" r="39" fill="none" stroke="#2E7D32" strokeWidth="1.5" />
-            {/* Ladle / Letter I symbol inside */}
-            <rect x="42" y="32" width="16" height="30" fill="none" stroke="#2E7D32" strokeWidth="4" />
-            <line x1="36" y1="32" x2="64" y2="32" stroke="#2E7D32" strokeWidth="6" strokeLinecap="round" />
-            <line x1="36" y1="62" x2="64" y2="62" stroke="#2E7D32" strokeWidth="6" strokeLinecap="round" />
-            <circle cx="50" cy="47" r="16" fill="#2E7D32" />
-            {/* Inner white 'I' symbol shape */}
-            <rect x="47" y="38" width="6" height="18" fill="#FFFFFF" rx="1" />
-            <rect x="43" y="38" width="14" height="3" fill="#FFFFFF" rx="0.5" />
-            <rect x="43" y="53" width="14" height="3" fill="#FFFFFF" rx="0.5" />
-            {/* Seal Texts */}
-            <text x="50" y="80" fontFamily="Segoe UI, sans-serif" fontSize="10.5" fontWeight="900" fill="#2E7D32" textAnchor="middle">VIZAG</text>
-            <text x="50" y="89" fontFamily="Segoe UI, sans-serif" fontSize="9" fontWeight="900" fill="#2E7D32" textAnchor="middle">STEEL</text>
-            <text x="50" y="97" fontFamily="Segoe UI, sans-serif" fontSize="7" fontWeight="bold" fill="#1565C0" textAnchor="middle">Pride of Steel</text>
-          </svg>
+          <img
+            src="https://res.cloudinary.com/djmqwehwk/image/upload/v1783072940/Screenshot_2026-07-03_152940_eyugab.png"
+            alt="VIZAG STEEL Logo"
+            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+          />
         </div>
 
         {/* Center Title exactly as shown */}
