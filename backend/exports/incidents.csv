@@ -1,0 +1,1 @@
+incident_id,incident_number,title,description,reported_by,department_id,location,equipment_involved,incident_type,potential_severity,status,reported_date,photograph_path,probable_cause,root_cause,immediate_action,preventive_action,severity,priority,investigation_remarks,verification_remarks,closed_by,closed_date

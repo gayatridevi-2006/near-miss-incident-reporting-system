@@ -1,0 +1,12 @@
+id,user_id,action,details,ip_address,created_at
+1,1,Login Success,User logged in successfully with role: Admin,127.0.0.1,2026-07-09 06:03:32.086861
+2,1,Report Download,User viewed/generated report: Executive Summary Report,127.0.0.1,2026-07-09 06:04:36.147815
+3,1,Report Download,User viewed/generated report: Executive Summary Report,127.0.0.1,2026-07-09 06:04:36.198329
+4,1,User Created,Admin created user 'Siddu' (12345) with role 'Admin' in department 'Blast Furnace',127.0.0.1,2026-07-09 06:05:47.007165
+5,1,Temporary Password Generated,Generated temporary password for user 'Siddu' (12345),127.0.0.1,2026-07-09 06:05:47.018030
+6,1,Email Failed,Failed to email credentials to mohit199189@gmail.com: SMTP credentials not configured in environment variables,127.0.0.1,2026-07-09 06:05:47.366905
+7,8,Login Success,User logged in successfully with role: Admin,127.0.0.1,2026-07-09 06:06:30.193041
+8,8,First Login Completed,User Siddu (12345) completed first login security setup,127.0.0.1,2026-07-09 06:07:09.004856
+9,8,Password Changed,User Siddu (12345) changed temporary password successfully,127.0.0.1,2026-07-09 06:07:09.019867
+10,8,Report Download,User viewed/generated report: Executive Summary Report,127.0.0.1,2026-07-09 06:07:59.624449
+11,8,Report Download,User viewed/generated report: Executive Summary Report,127.0.0.1,2026-07-09 06:07:59.685847

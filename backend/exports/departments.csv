@@ -1,0 +1,7 @@
+department_id,department_name,department_code,status,created_at
+1,Blast Furnace,BF,Active,2026-07-09 05:56:56.207959
+2,Steel Melting Shop,SMS,Active,2026-07-09 05:56:56.207965
+3,Rolling Mill,RM,Active,2026-07-09 05:56:56.207967
+4,Coke Ovens,CO,Active,2026-07-09 05:56:56.207969
+5,Safety & Environment,SAF,Active,2026-07-09 05:56:56.207971
+6,Maintenance & Utilities,MNT,Active,2026-07-09 05:56:56.207973
